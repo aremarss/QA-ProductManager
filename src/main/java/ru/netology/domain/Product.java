@@ -37,12 +37,7 @@ public abstract class Product {
     }
 
     public boolean matches(String search) {
-        Book book = new Book(search);
-        if (book.getName().contains(search)) {
-            return true;
-        }
-        Smartphone smartphone = new Smartphone(search);
-        if (smartphone.getName().contains(search)) {
+        if (getName().contains(search)) {
             return true;
         }
         return false;
